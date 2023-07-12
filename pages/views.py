@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, render
 from .models import Team
+from cars.models import Car
 
 def home(request):
     teams = Team.objects.all()
+    featured_cars = Car.objects.order_by('created_date').filter(is_featured=True)
     data = {
-            'teams': teams,        
+            'teams': teams,  
+            'featured_cars': featured_cars
+            
     }
     return render(request, 'pages/home.html', data)
     
