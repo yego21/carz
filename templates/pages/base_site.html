@@ -1,0 +1,17 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+<h1 id="head">
+  <img src="{% static '/img/logos/logo.png' %}" class="brand-img">
+
+</h1>
+
+
+{% endblock %}
+
+
+{% block extrastyle %}
+ <link rel="stylesheet" src="{% static 'css/admin.css' %}">
+
+{% endblock %}

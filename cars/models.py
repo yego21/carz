@@ -150,7 +150,7 @@ class Car(models.Model):
     doors =  models.CharField(choices=door_choices, max_length=10)
     passengers =  models.IntegerField()
     vim_no =  models.CharField(max_length=100)
-    milage =  models.IntegerField()
+    mileage =  models.IntegerField()
     fuel_type =  models.CharField(max_length=50)
     no_of_owners =  models.CharField(max_length=100)
     is_featured =  models.BooleanField(default=False)

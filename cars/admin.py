@@ -19,7 +19,7 @@ class CarAdmin(admin.ModelAdmin):
     
     thumbnail.short_description = ''
     
-    list_display = ["thumbnail", "car_title", "city", "model", "transmission", "body_style", "is_featured"]
+    list_display = ["id", "thumbnail", "car_title", "city", "model", "transmission", "body_style", "is_featured"]
     
     list_filter = ["model", "city", "body_style"]
     

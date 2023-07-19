@@ -5,12 +5,23 @@ from cars.models import Car
 
 def home(request):
     teams = Team.objects.all()
+    search_fields = {
+            'model':[],
+            'city':[],
+            'year':[],
+            'body_style':[]       
+            }
+    for field in search_fields:
+        items = Car.objects.values_list(field, flat=True).distinct()
+        search_fields[field].extend(items)
+    
     featured_cars = Car.objects.order_by('created_date').filter(is_featured=True)
     all_cars = Car.objects.order_by('created_date')
     data = {
             'teams': teams,  
             'featured_cars': featured_cars,
-            'all_cars': all_cars
+            'all_cars': all_cars,
+            'search_fields': search_fields
     }
     return render(request, 'pages/home.html', data)
     
@@ -22,7 +33,7 @@ def about(request):
             }
     return render(request, 'pages/about.html', data)
 
-def cars(request):
+def cars(request):   
     return render(request, 'pages/cars.html')
 
 def services(request):
@@ -30,5 +41,4 @@ def services(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
-        
         
