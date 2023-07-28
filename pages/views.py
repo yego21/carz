@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.shortcuts import get_object_or_404, render
+from django.core.mail import send_mail
 from .models import Team
 from cars.models import Car
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 def home(request):
     teams = Team.objects.all()
@@ -40,5 +43,27 @@ def services(request):
     return render(request, 'pages/services.html')
 
 def contact(request):
+    
+    if request.method=="POST":
+        full_name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        phone = request.POST['phone']
+        message = request.POST['message']
+       
+        
+        admin_info = User.objects.get(is_superuser=True)
+        admin_email = admin_info.email
+        message_body = "From: " + full_name +"\nEmail address: " +email+ "\nContact No.: "+ phone + "\n\n" + message    
+    
+        send_mail(subject,
+                    message_body,
+                    'zipyeg222@gmail.com',
+                    [admin_email],
+                    fail_silently=False,)
+        
+        messages.success(request, "Thank you for contacting us, we will reach out to you soon.")
+        return redirect('contact')
+    
     return render(request, 'pages/contact.html')
         

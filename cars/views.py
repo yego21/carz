@@ -4,6 +4,7 @@ from django.core.paginator import Paginator, Page, EmptyPage
 from django.contrib.postgres.search import SearchVector
 
 
+
 # Create your views here.
 def cars(request):
     
@@ -24,18 +25,20 @@ def cars(request):
         items = Car.objects.values_list(field, flat=True).distinct()
         search_fields[field].extend(items)
         
-    data = {
+        data = {
             'cars': paged_cars,
             'search_fields': search_fields
         }
 
     return render(request, 'cars/cars.html', data)
+
 def car_detail(request, id):
-    single_car = get_object_or_404(Car, pk=id)
+    single_car = get_object_or_404(Car, pk=id)      
     data = {
-            'single_car': single_car
+            'single_car': single_car,           
         }
     return render(request, 'cars/car_detail.html', data)
+
 
 def search(request):
     cars =  Car.objects.order_by('-created_date')

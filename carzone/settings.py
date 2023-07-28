@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-3dh5p*_=g(srembf!(jkw3rw6@hy!dp=z^nhi+=j)jy*2j0dbu
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = 'dashboard'
 
 
 # Application definition
@@ -39,8 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'cars.apps.CarsConfig',
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'ckeditor',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    
+    #providers
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    
 ]
 
 MIDDLEWARE = [
@@ -138,5 +150,23 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Nessages
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: "danger",  
+}
+
+SITE_ID = 1
 
 
+
+
+#Mail admins
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'zipyeg222@gmail.com'
+EMAIL_HOST_PASSWORD = 'wpnyatiifazxotyo'
+EMAIL_USE_TLS = True
