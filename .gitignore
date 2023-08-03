@@ -30,7 +30,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+lib/dcas
 lib64/
 parts/
 sdist/
@@ -38,7 +38,7 @@ var/
 wheels/
 share/python-wheels/
 *.egg-info/
-.installed.cfg
+cas.installed.cfg
 *.egg
 MANIFEST
 
@@ -163,7 +163,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-/media
+
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
