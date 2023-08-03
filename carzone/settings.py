@@ -148,7 +148,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+# STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = 'carzone-p58h.onrender.com/static'
 STATICFILES_DIRS = [
         BASE_DIR / 'carzone/static',
     ]
