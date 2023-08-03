@@ -89,13 +89,24 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'carzone_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'yeah',
+#         'HOST': 'localhost'
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'carzone_db',
-        'USER': 'postgres',
-        'PASSWORD': 'yeah',
-        'HOST': 'localhost'
+        'USER': 'carzone_db_f30x_user',
+        'PASSWORD': 'V6LqR7Hr8J0CZRyfWvHhYCSO8iUvqsoG',
+        'HOST': 'dpg-cj5tiageba7s7395sie0-a'
     }
 }
 
