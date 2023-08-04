@@ -151,7 +151,7 @@ STATIC_URL = 'static/'
 # STATIC_ROOT = BASE_DIR / 'static'
 STATIC_ROOT = 'carzone-p58h.onrender.com/static'
 STATICFILES_DIRS = [
-        BASE_DIR / 'carzone/static',
+        BASE_DIR / 'carzone-p58h.onrender.com/static',
     ]
 
 # Media Files
