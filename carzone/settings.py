@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3dh5p*_=g(srembf!(jkw3rw6@hy!dp=z^nhi+=j)jy*2j0dbu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['carzone-p58h.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['carzone-p58h.onrender.com', 'https://carzone-p58h.onrender.com/accounts/login', '127.0.0.1']
 
 
 LOGIN_REDIRECT_URL = 'dashboard'
