@@ -116,7 +116,7 @@ DATABASES = {
 
 STORAGES = {
     # ...
-    "static": {
+    "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
