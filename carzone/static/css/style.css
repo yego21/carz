@@ -642,6 +642,7 @@ input[type=checkbox]:checked + label:before {
     font-family: 'Roboto', sans-serif;
     display: inline-block;
     width: 100%;
+    position: fixed;
 }
 
 .top-header.bg-active{

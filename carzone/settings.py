@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3dh5p*_=g(srembf!(jkw3rw6@hy!dp=z^nhi+=j)jy*2j0dbu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['carzone-p58h.onrender.com']
+ALLOWED_HOSTS = ['carzone-p58h.onrender.com', '127.0.0.1']
 
 
 LOGIN_REDIRECT_URL = 'dashboard'
@@ -184,7 +184,7 @@ MESSAGE_TAGS = {
     messages.ERROR: "danger",  
 }
 
-SITE_ID = 1
+SITE_ID = 3
 
 
 
@@ -193,6 +193,6 @@ SITE_ID = 1
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = '######@gmail.com'
-EMAIL_HOST_PASSWORD = '################'
+EMAIL_HOST_USER = 'zipyeg222@gmail.com'
+EMAIL_HOST_PASSWORD = 'wpnyatiifazxotyo'
 EMAIL_USE_TLS = True
