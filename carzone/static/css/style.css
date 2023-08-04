@@ -41,6 +41,10 @@ ul {
     color: #535353;
 }
 
+.d-hide{
+  display: none;
+}
+
 .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: none;
@@ -8249,6 +8253,10 @@ table {
 }
 
 @media (max-width: 992px) {
+    .login-dropdown {
+      display: flex;
+      flex-direction: column;
+    }
     .m-hide{
         display: none;
     }
@@ -9774,3 +9782,11 @@ a.nav-link.active{
   position: relative;
   z-index: 9999!important;
 }
+
+.nav-item.hidden .login-dropdown .nav-link a{
+  display: none;
+}
+
+/* CSS for desktop view */
+
+/* Media query for mobile view */

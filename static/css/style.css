@@ -41,6 +41,10 @@ ul {
     color: #535353;
 }
 
+.d-hide{
+  display: none;
+}
+
 .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: none;
@@ -642,6 +646,7 @@ input[type=checkbox]:checked + label:before {
     font-family: 'Roboto', sans-serif;
     display: inline-block;
     width: 100%;
+    position: fixed;
 }
 
 .top-header.bg-active{
@@ -919,11 +924,11 @@ input[type=checkbox]:checked + label:before {
 }
 
 .banner-bg {
-    
+
 }
 
 .item-bg {
-    
+
     height: 100vh;
     /*animation: bgburnsEast 25s linear infinite alternate;
     -webkit-animation: bgburnsEast 25s linear infinite alternate;*/
@@ -4658,7 +4663,7 @@ footer {
 
 /** Listings parallax start **/
 .listings-parallax {
-    
+
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5474,7 +5479,7 @@ footer {
 }
 
 .contact-section .bg-img {
-    
+
     background-size: cover;
     top: 0;
     bottom: 0;
@@ -8248,6 +8253,10 @@ table {
 }
 
 @media (max-width: 992px) {
+    .login-dropdown {
+      display: flex;
+      flex-direction: column;
+    }
     .m-hide{
         display: none;
     }
@@ -9169,7 +9178,7 @@ table {
         line-height: normal;
         margin-bottom: 15px;
     }
-    
+
     .alert {
         text-transform: uppercase;
         font-size: 12px;
@@ -9768,11 +9777,16 @@ a.nav-link.active{
   color: #fff !important;
 }
 
+#logout-message{
+  align: justify;
+  position: relative;
+  z-index: 9999!important;
+}
 
+.nav-item.hidden .login-dropdown .nav-link a{
+  display: none;
+}
 
+/* CSS for desktop view */
 
-
-
-
-
-
+/* Media query for mobile view */
